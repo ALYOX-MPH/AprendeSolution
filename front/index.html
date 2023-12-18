@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AprendeSolution</title>
+    <!-- Agrega la referencia de Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+<!-- Barra de Navegación -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">AprendeSolution</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="index.html">Libros Disponibles</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="agregar.html">Agregar Contenido</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="foro.html">Foro</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Eduquin</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="sobre nosotros.html">Sobre Nosotros</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Barra de Búsqueda -->
+<div class="container mt-3">
+    <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="Buscar clases, exámenes, libros..." aria-label="Buscar" aria-describedby="button-addon2">
+        <div class="input-group-append">
+            <button class="btn btn-outline-secondary" type="button" id="button-addon2">Buscar</button>
+        </div>
+    </div>
+</div>
+
+<div id="librosContainer" class="container mt-3"></div>
+
+<!-- Casillas de Libros Más Buscados -->
+<div class="container mt-3"onclick="mostrarDetalleLibro('Libro 1')">
+    <div class="row">
+        <div class="col-md-4 mb-3">
+            <div class="card">
+                <img src="ruta_a_la_imagen1.jpg" class="card-img-top" alt="Libro 1">
+                <div class="card-body">
+                    <p class="card-text">Descripción del Libro 1.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-3">
+            <div class="card">
+                <img src="ruta_a_la_imagen2.jpg" class="card-img-top" alt="Libro 2">
+                <div class="card-body">
+                    <p class="card-text">Descripción del Libro 2.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-3">
+            <div class="card">
+                <img src="ruta_a_la_imagen3.jpg" class="card-img-top" alt="Libro 3">
+                <div class="card-body">
+                    <p class="card-text">Descripción del Libro 3.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-3">
+            <div class="card">
+                <img src="ruta_a_la_imagen3.jpg" class="card-img-top" alt="Libro 3">
+                <div class="card-body">
+                    <p class="card-text">Descripción del Libro 4.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-3">
+            <div class="card">
+                <img src="ruta_a_la_imagen3.jpg" class="card-img-top" alt="Libro 3">
+                <div class="card-body">
+                    <p class="card-text">Descripción del Libro 5.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-3">
+            <div class="card">
+                <img src="ruta_a_la_imagen3.jpg" class="card-img-top" alt="Libro 3">
+                <div class="card-body">
+                    <p class="card-text">Descripción del Libro 6.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-3">
+            <div class="card">
+                <img src="ruta_a_la_imagen3.jpg" class="card-img-top" alt="Libro 3">
+                <div class="card-body">
+                    <p class="card-text">Descripción del Libro 7.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-3">
+            <div class="card">
+                <img src="ruta_a_la_imagen3.jpg" class="card-img-top" alt="Libro 3">
+                <div class="card-body">
+                    <p class="card-text">Descripción del Libro 8.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-3">
+            <div class="card">
+                <img src="ruta_a_la_imagen3.jpg" class="card-img-top" alt="Libro 3">
+                <div class="card-body">
+                    <p class="card-text">Descripción del Libro 9.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-3">
+            <div class="card">
+                <img src="ruta_a_la_imagen3.jpg" class="card-img-top" alt="Libro 3">
+                <div class="card-body">
+                    <p class="card-text">Descripción del Libro 10.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-3">
+            <div class="card">
+                <img src="ruta_a_la_imagen3.jpg" class="card-img-top" alt="Libro 3">
+                <div class="card-body">
+                    <p class="card-text">Descripción del Libro 11.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-3">
+            <div class="card">
+                <img src="ruta_a_la_imagen3.jpg" class="card-img-top" alt="Libro 3">
+                <div class="card-body">
+                    <p class="card-text">Descripción del Libro 12.</p>
+                </div>
+            </div>
+        </div>
+         <div class="col-md-4 mb-3">
+            <div class="card">
+                <img src="ruta_a_la_imagen3.jpg" class="card-img-top" alt="Libro 3">
+                <div class="card-body">
+                    <p class="card-text">Descripción del Libro 13.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-3">
+            <div class="card">
+                <img src="ruta_a_la_imagen3.jpg" class="card-img-top" alt="Libro 3">
+                <div class="card-body">
+                    <p class="card-text">Descripción del Libro 14.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-3">
+            <div class="card">
+                <img src="ruta_a_la_imagen3.jpg" class="card-img-top" alt="Libro 3">
+                <div class="card-body">
+                    <p class="card-text">Descripción del Libro 15.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-3">
+            <div class="card">
+                <img src="ruta_a_la_imagen3.jpg" class="card-img-top" alt="Libro 3">
+                <div class="card-body">
+                    <p class="card-text">Descripción del Libro 16.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-3">
+            <div class="card">
+                <img src="ruta_a_la_imagen3.jpg" class="card-img-top" alt="Libro 3">
+                <div class="card-body">
+                    <p class="card-text">Descripción del Libro 17.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-3">
+            <div class="card">
+                <img src="ruta_a_la_imagen3.jpg" class="card-img-top" alt="Libro 3">
+                <div class="card-body">
+                    <p class="card-text">Descripción del Libro 18.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-3">
+            <div class="card">
+                <img src="ruta_a_la_imagen3.jpg" class="card-img-top" alt="Libro 3">
+                <div class="card-body">
+                    <p class="card-text">Descripción del Libro 19.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-3">
+            <div class="card">
+                <img src="ruta_a_la_imagen3.jpg" class="card-img-top" alt="Libro 3">
+                <div class="card-body">
+                    <p class="card-text">Descripción del Libro 20.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-3">
+            <div class="card">
+                <img src="ruta_a_la_imagen3.jpg" class="card-img-top" alt="Libro 3">
+                <div class="card-body">
+                    <p class="card-text">Descripción del Libro 21.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    </div>
+</div>
+    </div>
+</div>
+    </div>
+</div>
+    </div>
+</div>
+    </div>
+</div>
+    </div>
+</div>
+    </div>
+</div>
+    </div>
+</div>
+    </div>
+</div>
+    </div>
+</div>
+    </div>
+</div>
+    </div>
+</div>
+    </div>
+</div>
+    </div>
+    
+</div>
+    </div>
+</div>
+    </div>
+</div>
+    </div>
+</div>
+    </div>
+</div>
+
+
+<!-- Footer -->
+<footer class="footer mt-5 py-3 bg-light">
+    <div class="container">
+        <span class="text-muted">AprendeSolution - © 2023</span>
+        <ul class="list-inline float-right">
+            <li class="list-inline-item"><a href="index.html">Libros Disponibles</a></li>
+            <li class="list-inline-item"><a href="agregar.html">Agregar Contenido</a></li>
+            <li class="list-inline-item"><a href="foro.html">Foro</a></li>
+            <li class="list-inline-item"><a href="#">Eduquin</a></li>
+            <li class="list-inline-item"><a href="sobre nosotros.html">Sobre Nosotros</a></li>
+        </ul>
+    </div>
+</footer>
+
+<!-- Agrega la referencia de Bootstrap JS y jQuery al final del body para un rendimiento óptimo -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="main.js"></script>
+
+<script src="main.js"></script>
+
+<!-- app.js (o el contenido de app.js) -->
+<script src="app.js"></script>
+
+<!-- agre.js (o el contenido de agre.js) -->
+<script src="agre.js"></script>
+
+<!-- foro.js (o el contenido de foro.js) -->
+<script src="foro.js"></script>
+
+</body>
+</html>

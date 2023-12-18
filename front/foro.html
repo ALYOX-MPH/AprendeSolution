@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Foro</title>
+    <!-- Agrega la referencia de Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Agrega el estilo personalizado para el chat -->
+    <style>
+        #chat-box {
+            max-height: 300px;
+            overflow-y: scroll;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Barra de Navegación -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Tu Página</a>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="index.html">Libros Disponibles</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="agregar.html">Agregar Contenido</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="foro.html">Foro</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Eduquin</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="sobre nosotros.html">Sobre Nosotros</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Contenido del Foro -->
+<div class="container mt-5">
+    <h2>Foro</h2>
+    <div id="chat-box" class="border p-3 mb-3">
+        <!-- Aquí se mostrarán los mensajes del chat -->
+    </div>
+    <div class="input-group mb-3">
+        <input type="text" class="form-control" id="mensaje" placeholder="Escribe tu mensaje...">
+        <div class="input-group-append">
+            <button class="btn btn-primary" type="button" onclick="enviarMensaje()">Enviar</button>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="footer mt-5 py-3 bg-light">
+    <!-- ... (resto del footer) ... -->
+</footer>
+
+<!-- Agrega la referencia de Bootstrap JS y jQuery al final del body para un rendimiento óptimo -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<!-- Agrega el script personalizado para el chat -->
+<script>
+    // Inicializa Socket.io y conecta con el servidor de Socket.io
+    const socket = io.connect('http://localhost:3071'); // Asegúrate de cambiar la URL del servidor
+
+    // Función para enviar mensajes al servidor
+    function enviarMensaje() {
+        const mensaje = $('#mensaje').val();
+        if (mensaje.trim() !== '') {
+            socket.emit('mensaje', { mensaje });
+            $('#mensaje').val('');
+        }
+    }
+
+    // Función para mostrar mensajes en el chat
+    function mostrarMensaje(mensaje) {
+        $('#chat-box').append(`<p>${mensaje}</p>`);
+    }
+
+    // Escucha eventos de mensajes desde el servidor
+    socket.on('mensaje', function (data) {
+        mostrarMensaje(data.mensaje);
+    });
+</script>
+<!-- Agrega la referencia de Socket.io -->
+<script src="https://cdn.socket.io/4.0.1/socket.io.min.js"></script>
+
+<!-- Tu archivo main.js -->
+<script src="main.js"></script>
+
+<!-- app.js (o el contenido de app.js) -->
+<script src="app.js"></script>
+
+<!-- agre.js (o el contenido de agre.js) -->
+<script src="agre.js"></script>
+
+<!-- foro.js (o el contenido de foro.js) -->
+<script src="foro.js"></script>
+
+</body>
+</html>

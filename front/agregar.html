@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Agregar Contenido</title>
+    <!-- Agrega la referencia de Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+<!-- Barra de Navegación -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Tu Página</a>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="index.html">Libros Disponibles</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="agregar.html">Agregar Contenido</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="foro.html">Foro</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Eduquin</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Sobre Nosotros</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Contenido del Formulario de Agregar -->
+<div class="container mt-3">
+    <h2>Agregar Contenido</h2>
+    <form id="agregarForm" class="container mt-3">
+        <div class="form-group">
+            <label for="nombre">Nombre del Libro:</label>
+            <input type="text" class="form-control" id="nombre" required>
+        </div>
+        <div class="form-group">
+            <label for="descripcion">Descripción:</label>
+            <textarea class="form-control" id="descripcion" rows="3" required></textarea>
+        </div>
+        <div class="form-group">
+            <label for="imagen">URL de la Imagen:</label>
+            <input type="text" class="form-control" id="imagen" required>
+        </div>
+        <!-- Formulario para agregar un nuevo libro -->
+<div class="container mt-3">
+    <form id="agregarLibroForm" enctype="multipart/form-data">
+        <!-- ... (otros campos) ... -->
+        <div class="form-group">
+            <label for="archivo">Subir Archivo:</label>
+            <input type="file" class="form-control-file" id="archivo" name="archivo" accept=".pdf, .doc, .docx">
+        </div>
+        <button type="submit" class="btn btn-primary">Agregar Libro</button>
+    </form>
+</div>
+
+       
+        
+    </form>
+</div>
+
+<!-- Lista de libros -->
+<div class="container mt-3">
+    <h2>Libros Más Buscados</h2>
+    <ul id="listaLibros"></ul>
+</div>
+
+<!-- ... (resto del código) ... -->
+
+<!-- Agrega la referencia de Bootstrap JS y jQuery al final del body para un rendimiento óptimo -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<!-- Agrega tu propio script JavaScript aquí -->
+<script src="main.js"></script>
+
+<!-- app.js (o el contenido de app.js) -->
+<script src="app.js"></script>
+
+<!-- agre.js (o el contenido de agre.js) -->
+<script src="agre.js"></script>
+
+<!-- foro.js (o el contenido de foro.js) -->
+<script src="foro.js"></script>
+</body>
+</html>
